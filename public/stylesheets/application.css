@@ -1313,3 +1313,28 @@ color: #555; text-shadow: 1px 1px 0 #fff;
   height:1px;
   overflow:hidden;
 }
+
+/* mantis status colors  */
+/* 1 pixel white line between rows */
+tr.issue    { border: 1px solid white; }
+
+/* Optional 1 pixel white line between columns */
+/* tr.issue td { border: 1px solid white; } */
+
+/* use MantisBT style coloring by status */
+tr.status-1 { background: #fcc; } /* new */
+tr.status-9 { background: #fd6; } /* ack */
+tr.status-2 { background: #ffffcc; } /* inprogress */
+tr.status-4 { background: #e3b7eb; } /* feedback */
+tr.status-7 { background: #dfb; } /* review */
+tr.status-3 { background: #dfd; } /* resolved */
+/* if you only want the status column highlighted, use these instead */
+/*
+tr.status-1 td.status { background: #fcc; }
+tr.status-2 td.status { background: #cdf; }
+tr.status-3 td.status { background: #dfd; }
+tr.status-4 td.status { background: #fdf; }
+tr.status-5 td.status { background: #eee; }
+tr.status-6 td.status { background: #fd6; }
+*/
+
