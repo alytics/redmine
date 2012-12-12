@@ -169,9 +169,13 @@ class User < Principal
     login = login.to_s
     password = password.to_s
 
-    # Make sure no one can sign in with an empty login or password
-    return nil if login.empty? || password.empty?
+    # Make sure no one can sign in with an empty password
+    return nil if password.empty?
+
     user = find_by_login(login)
+    if not user
+      user = find_by_mail(login)
+    end
     if user
       # user is already in local database
       return nil unless user.check_password?(password)
