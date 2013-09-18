@@ -44,6 +44,7 @@ RedmineApp::Application.routes.draw do
   post 'boards/:board_id/topics/:id/destroy', :to => 'messages#destroy'
 
   # Misc issue routes. TODO: move into resources
+  match '/projects/:project_id', :to => 'issues#index'
   match '/issues/auto_complete', :to => 'auto_completes#issues', :via => :get, :as => 'auto_complete_issues'
   match '/issues/context_menu', :to => 'context_menus#issues', :as => 'issues_context_menu', :via => [:get, :post]
   match '/issues/changes', :to => 'journals#index', :as => 'issue_changes', :via => :get
