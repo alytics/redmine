@@ -77,6 +77,11 @@ class Issue < ActiveRecord::Base
     includes(:project).where(Issue.visible_condition(args.shift || User.current, *args))
   }
 
+  scope :exclude_resolved, lambda {|*args|
+    {:conditions => ["#{IssueStatus.table_name}.id != ?", 3], :include => :status}
+  }
+
+
   scope :open, lambda {|*args|
     is_closed = args.size > 0 ? !args.first : false
     includes(:status).where("#{IssueStatus.table_name}.is_closed = ?", is_closed)
