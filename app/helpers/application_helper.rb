@@ -145,9 +145,8 @@ module ApplicationHelper
     if project.archived?
       h(project.name)
     else
-      link_to project.name,
-        project_url(project, {:only_path => true}.merge(options)),
-        html_options
+      url = {:controller => 'issues', :action => 'index', :project_id => project}.merge(options)
+      link_to project.name, url, html_options
     end
   end
 
