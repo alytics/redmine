@@ -142,7 +142,8 @@ module ApplicationHelper
       url = {:controller => 'projects', :action => 'show', :id => project}.merge(options)
       link_to project.name, url, html_options
     else
-      link_to project.name, project_path(project, options), html_options
+      url = {:controller => 'issues', :action => 'index', :project_id => project}.merge(options)
+      link_to project.name, url, html_options
     end
   end
 
