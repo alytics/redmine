@@ -363,7 +363,7 @@ class Issue < ActiveRecord::Base
   safe_attributes 'project_id',
     :if => lambda {|issue, user|
       if issue.new_record?
-        issue.copy?
+        true
       elsif user.allowed_to?(:move_issues, issue.project)
         Issue.allowed_target_projects_on_move.count > 1
       end
