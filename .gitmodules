@@ -1,0 +1,12 @@
+[submodule "plugins/clipboard_image_paste"]
+	path = plugins/clipboard_image_paste
+	url = https://github.com/peclik/clipboard_image_paste
+[submodule "plugins/redmine_cut_tag"]
+	path = plugins/redmine_cut_tag
+	url = https://github.com/Undev/redmine_cut_tag
+[submodule "plugins/redmine_bitbucket"]
+	path = plugins/redmine_bitbucket
+	url = https://bitbucket.org/steveqx/redmine_bitbucket.git
+[submodule "plugins/redmine_my_page_queries"]
+	path = plugins/redmine_my_page_queries
+	url = https://github.com/Undev/redmine_my_page_queries
