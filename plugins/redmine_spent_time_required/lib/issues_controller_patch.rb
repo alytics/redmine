@@ -26,9 +26,13 @@ module RedmineSpentTimeRequired
                 (allowed_statuses.member?(current_status.to_s)) &&
                 (current_user == assignee))
               find_issue
-              update_issue_from_params
-              @time_entry.errors.add :hours, :empty
-              render(:action => 'edit') and return
+              if @issue.status_id.to_s != current_status.to_s
+	              update_issue_from_params
+	              @time_entry.errors.add :hours, :empty
+	              render(:action => 'edit') and return
+	      else
+		update_without_check_spent_time
+	      end
             else
               update_without_check_spent_time
             end
