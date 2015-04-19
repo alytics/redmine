@@ -10,3 +10,6 @@
 [submodule "plugins/redmine_my_page_queries"]
 	path = plugins/redmine_my_page_queries
 	url = https://github.com/Undev/redmine_my_page_queries
+[submodule "plugins/redmine_omniauth_google"]
+	path = plugins/redmine_omniauth_google
+	url = git@github.com:twinslash/redmine_omniauth_google.git
