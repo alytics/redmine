@@ -13,6 +13,3 @@
 [submodule "plugins/parent_issue_filter"]
 	path = plugins/parent_issue_filter
 	url = https://github.com/onozaty/redmine-parent-issue-filter
-[submodule "plugins/redmine_silencer"]
-	path = plugins/redmine_silencer
-	url = https://github.com/paginagmbh/redmine_silencer
