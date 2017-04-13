@@ -15,4 +15,4 @@
 	url = https://github.com/onozaty/redmine-parent-issue-filter
 [submodule "plugins/redmine_silencer"]
 	path = plugins/redmine_silencer
-	url = git@github.com:alytics/redmine_silencer.git
+	url = https://github.com/alytics/redmine_silencer.git
