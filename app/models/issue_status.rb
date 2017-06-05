@@ -62,7 +62,7 @@ class IssueStatus < ActiveRecord::Base
         if author || assignee
           scope = scope.where("author = ? OR assignee = ?", author, assignee)
         else
-          scope = scope.where("author = ? AND assignee = ?", false, false)
+          scope = scope.where("(author = ? AND assignee = ?) OR (author IS NULL AND assignee IS NULL)", false, false)
         end
       end
 
