@@ -2,7 +2,7 @@
 <html lang="<%= current_language %>">
 <head>
 <meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
 <title><%= html_title %></title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="description" content="<%= Redmine::Info.app_name %>" />
@@ -71,7 +71,7 @@
        <a href="#" class="mobile-toggle-button js-flyout-menu-toggle-button"></a>
 
     <% if User.current.logged? || !Setting.login_required? %>
-    <div id="quick-search" style="<%= display_main_menu? ? 'float: none; z-index: 10; position: absolute; right: 0; top: -8px;' : '' %>">
+    <div id="quick-search">
         <%= form_tag({:controller => 'search', :action => 'index', :id => @project}, :method => :get ) do %>
         <%= hidden_field_tag(controller.default_search_scope, 1, :id => nil) if controller.default_search_scope %>
         <label for='q'>
@@ -83,14 +83,13 @@
     </div>
     <% end %>
 
-    <div style="<%= display_main_menu? ? 'display: none' : '' %>">
- 	   <h1 style="float:left"><%= page_header_title %></h1>
+    <div>
+ 	 <h1 style="float:left"><%= page_header_title %></h1>
    	 <div style="float:left"> prod: 11.7 (master)<br>ae: 11.7 (master)</div>
     </div>
-
-    <% if display_main_menu?(@project) %>
+       <% if display_main_menu?(@project) %>
     <div id="main-menu">
-      <%= render_main_menu(@project) %>
+        <%= render_main_menu(@project) %>
     </div>
     <% end %>
 </div>
