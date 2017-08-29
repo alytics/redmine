@@ -140,6 +140,16 @@ img.gravatar {
 	margin: 20px 10px;
 }
 
+#page-header-title {
+	 height: 70px;
+ }
+
+#page-header-title h1{
+	float: left;
+	margin: 16px 25px;
+	padding: 0;
+}
+
 /**********************************************************/
 /* TOP-MENU */
 /**********************************************************/
@@ -171,8 +181,8 @@ img.gravatar {
 	position: relative;
   	height: auto;
   	box-sizing: border-box;
-	float: left;
-	margin-top: 5px;
+	/*float: left;*/
+	/*margin-top: 5px;*/
 }
 
 #main-menu ul {
